@@ -5,13 +5,13 @@ const bookSchema = Joi.object({
   title: Joi.string().min(3).max(150).required().messages({
     'string.empty': 'Title is required',
     'string.min': 'Title must be at least 3 characters long',
-    'string.max': 'Title must be less than or equal to 255 characters',
+    'string.max': 'Title must be less than or equal to 150 characters',
     'any.required': 'Title is required',
   }),
   author: Joi.string().min(3).max(150).required().messages({
     'string.empty': 'Author is required',
     'string.min': 'Author must be at least 3 characters long',
-    'string.max': 'Author must be less than or equal to 255 characters',
+    'string.max': 'Author must be less than or equal to 150 characters',
     'any.required': 'Author is required',
   }),
   year: Joi.number().integer().min(1000).max(new Date().getFullYear()).required().messages({
